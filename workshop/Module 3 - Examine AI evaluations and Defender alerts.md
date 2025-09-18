@@ -6,7 +6,7 @@ This guide provides instructions for examining the AI red teaming agent results 
 
 ## Azure AI Foundry project red team evaluations
 
-Security alerting from Defender for AI Services can be found in the Azure AI Foundry Left navigation's blade, here the data analyst or application owner can find if an alert was recently issued and some basic infromation on the alert and affected resource, including some remediation steps. The user is invited to review the alert in more detail and evidence in Defender for Cloud.
+Security alerting from Defender for AI Services can be found in the left navigation blade of Azure AI Foundry.  Here, the data analyst or application owner can find if an alert was recently issued and view some basic information on the alert and affected resource, including some remediation steps. The user is invited to review the alert in more detail and evidence in Defender for Cloud.
 
 ![AI Foundry Alert](../images/aifoundalert.png)
 
@@ -14,43 +14,43 @@ Security alerting from Defender for AI Services can be found in the Azure AI Fou
 
 ## Defender for Cloud
 
-The security alert is also in Defneder for Cloud and in the left navigation Security Alerts. The alert itself contains some mor security context including aspects of the sucpicious prompt that triggered the alert. 
+The security alert is also in Defender for Cloud and in the left navigation Security Alerts. The alert itself contains additional security context including aspects of the sucpicious prompt that triggered the alert. 
 
 ![MDC Alert](../images/mdcalert.png)
 
 ![MDC Alert](../images/mdcalertdetails1.png)
 
-Some of those ascpects include:
+Some of those aspects include:
 
-- Mitre Tactics
+- MITRE ATT&CK® Tactics
 - IP address
 - Geo information
-- model invovled in attack.
+- The model involved in the attack
 
 ![MDC Alert](../images/mdcalertdetails2.png)
 
-The Supporting Evidence and show events in the bottom right provider even more rich data can be found like:
+We can see even more rich data within the "Supporting evidence events" section by clicking "Show events" in the bottom right:
 
 - Suspicious prompt segemnt
-- User agent involved with browser or aapplication.
+- User agent involved with browser or application
 - Confidence score
 
 ![MDC Alert](../images/mdcalertdetails3.png)
 
 ## Defender XDR alerting
 
-Finally the Defender for AI Services alerting is available in the Defender XDR portal, and can also be correlated with other suspicious or malicious activity around similar patterns. The following below shows a Jailbreak attempt as part of a correlated larger attack story. The same evidence and information is available in differnt tles as well including the same infromation in the Defender for Cloud alert like Prompt Suspicious Segment.
+Finally, the Defender for AI Services alerting is available in the Defender XDR portal, and can also be correlated with other suspicious or malicious activity around similar patterns. The following below shows a Jailbreak attempt as part of a correlated larger attack story. The same evidence and information is available in different tiles, including the same information we saw in the Defender for Cloud alert such as Prompt Suspicious Segment.
 
 ![XDR Alert](../images/xdralert.png)
 
 ## AI-SPM within Azure AI Foundry and Defender for Cloud
 
-Security Recommendations are also generated to reduce attack surfaces and harden Azure Services including Azure AI Foundry, these results can be found across areas relevant to different personas protecting the GenAI application. Agin this will include Azure AI Foundry Project -> Guardrails + controls -> Security Recommendations . By clicking on a recomendation you can get some additional details and a button to send you to more infromation found in Defender for Cloud.
+Security Recommendations are also generated to reduce attack surfaces and harden Azure Services including Azure AI Foundry. These results can be found across areas relevant to different personas protecting the GenAI application. These recommendations are surfaced at Azure AI Foundry Project -> Guardrails + controls -> Security Recommendations. By clicking on a recommendation, you can get some additional details and a pivot link for more information found in Defender for Cloud.
 
 ![AI recommendation](../images/aispmrec.png)
 
-and Defender for Cloud -> Recomendations
+The same recommendation appears in Defender for Cloud -> Recomendations:
 
 ![MDC recommendation](../images/mdcspmrec.png)
 
-Defender for Cloud will have additional context involving the MITRE Tactics involved with the attack surface. Any additional risk factors, and a top suggested active user for assignment for remediation.
+Defender for Cloud will have additional context involving the MITRE ATT&CK® Tactics involved with the attack surface, any additional risk factors, and a top suggested active user for assignment for remediation.
